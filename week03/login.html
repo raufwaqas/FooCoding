@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c26a33e560.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <title>Login</title>
+</head>
+<body>
+    
+
+    <div class="container">
+
+        <div class="left_div">
+           
+            <div class="left_inner_div">
+                <a href="index.html" class="red"><img src="./img/logoWhite.svg" class="logo red logoW" alt="Logo"></a>
+                <p>Join us to get yourself analyzed with the best web designers, developers and agencies in the world.</p>
+                <br>
+                <a class="bkthm" href="index.html"><p>Back to homepage</p></a>
+       
+            </div>
+         
+        </div>
+
+        <div class="card">
+            <div class="inner-box" id="card">
+                <div class="card-front">
+                    <h2>LOGIN</h2>
+                    <form action="">
+                        <input type="email" class="input-box" placeholder="Email ID" required>
+                        <input type="password" class="input-box" placeholder="Password" required>
+                        <button type="submit" class="submit-btn">Submit</button>
+                        <input type="checkbox"><span>Remember Me</span>
+                    </form>
+                    <button type="button" class="btn" onclick="openRegister()">I'm new here</button>
+                    <a href="">Forgot Password</a>
+                </div>
+                <div class="card-back">
+                    <h2>REGISTER</h2>
+                    <form action="">
+                        <input type="text" class="input-box" placeholder="Your Name" required>
+                        <input type="email" class="input-box" placeholder="Email ID" required>
+                        <input type="password" class="input-box" placeholder="Password" required>
+                        <button type="submit" class="submit-btn">Submit</button>
+                        <input type="checkbox"><span>Remember Me</span>
+                    </form>
+                    <button type="button" class="btn" onclick="openLogin()">I've an account</button>
+                    <a href="">Forgot Password</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    
+
+
+
+
+    <script>
+        var card = document.getElementById("card");
+
+        function openRegister(){
+            card.style.transform = "rotateY(-180deg)";
+        }
+        function openLogin(){
+            card.style.transform = "rotateY(0deg)";
+        }
+    </script>
+
+
+
+</body>
+</html>
