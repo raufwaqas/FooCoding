@@ -1,0 +1,153 @@
+section {
+    background-color: #000;
+}
+
+.features {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    padding: 10rem;
+    gap: 2rem;
+    color: #fff;
+}
+
+.feature {
+    height: fit-content;
+    background-color: #fff;
+    color: #000;
+    animation-name: tilt-in-bottom-1;
+    animation-duration: 1s;
+}
+@keyframes tilt-in-bottom-1 {
+    0% {
+      transform: rotateY(30deg) translateY(300px) skewY(-20deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotateY(0deg) translateY(0) skewY(0deg);
+      opacity: 1;
+    }
+  }
+
+.feature:hover{
+    background-color: #333;
+    color: #fff;
+}
+
+h3{
+    font-weight: 400;
+    line-height: 3.2rem;
+    letter-spacing: 1px;
+}
+.pic {
+    width: 100%
+}
+
+.date {
+    float: right;
+}
+
+.headingSection {
+    height: 80px;
+}
+
+.headingSection {
+    padding-left: 15px;
+}
+
+hr {
+    margin-top: 3px;
+    border: solid .5px #555;
+}
+
+.country {
+    font-size: 14px;
+    font-weight: 300;
+    padding-left: 15px;
+}
+
+.author {
+    font-size: 13px;
+    font-weight: 300;
+    padding-left: 15px;
+    color: #777777;
+    padding: 10px 10px 10px 15px;
+}
+
+.date {
+    font-size: 14px;
+    font-weight: 300;
+    padding-right: 15px;
+}
+
+.featureDes {
+    color: #a2a2a2;
+    display: block;
+    position: absolute;
+    padding: 100px 0px 0px 155px;
+}
+
+.linking {
+    color: #f5f5f5;
+    
+}
+
+.bigText {
+    font-size: 60px;
+    line-height: 50px;
+    font-weight: 100;
+    color: rgb(25, 25, 25);
+    text-transform: uppercase;
+}
+
+/* Small Desktop */
+@media screen and (max-width: 1400px) {
+    .featureDes{
+        padding: 30px 0px 0px 4rem;
+    }
+    .features {
+        grid-auto-rows: auto;
+        padding: 4rem;
+        gap: 1rem;
+    }
+}
+
+
+/* Tablet or laptop */
+@media screen and (max-width: 1200px) {
+    .featureDes{
+        padding: 30px 0px 0px 4rem;
+    }
+    .bigText{
+        font-size: 3rem;
+    }
+    .features {
+        grid-auto-rows: auto;
+        padding: 4rem;
+        gap: 1rem;
+    }
+}
+
+/* Mobile and small tablets */
+@media screen and (max-width: 768px) {
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+        .bigText{
+            font-size: 1.3rem;
+        }
+}
+
+/* Mobile and small tablets */
+@media screen and (max-width: 500px) {
+    .features {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .bigText{
+        display: none;
+    }
+
+}
